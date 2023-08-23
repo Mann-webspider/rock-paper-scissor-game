@@ -1,0 +1,211 @@
+:root{
+    
+--scissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+--paperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+--rockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+--lizardGradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+--cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+
+--DarkText: hsl(229, 25%, 31%);
+--ScoreText: hsl(229, 64%, 46%);
+--HeaderOutline: hsl(217, 16%, 45%);
+
+
+--radial-background-Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+
+--primary-font:'Barlow Semi Condensed', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+body{
+    height:100vh;
+    background: radial-gradient(hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.top{
+    width: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.375);
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.score{
+    width: 10rem;
+    height: 6rem;
+    border-radius: 10px;
+    background-color: aliceblue;
+    color: var(--DarkText);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score h4{
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+.score h2{
+    font-size: 4rem;
+    margin: -15px;
+    padding: 0;
+}
+
+.element{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    user-select: none;
+    
+}
+.triangle{
+    position: absolute;
+    top: 100px;
+    margin-left: 35px;
+}
+
+.rps{
+    /* background-color: brown; */
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    top: 50px;
+    position: relative;
+    justify-content: space-between;
+}
+.paper-scissor{
+    display: flex;
+    justify-content: space-between;
+}
+.rock{
+    display: flex;
+    justify-content: center;
+    /* align-items: last baseline; */
+}
+.rps-circle-red {
+    width: 8rem;
+    height: 8rem;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 15px solid ;
+    cursor: pointer;
+    outline-color: hsl(349, 71%, 52%);
+}
+.rps-circle-yellow {
+    width: 8rem;
+    height: 8rem;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 15px solid ;
+    cursor: pointer;
+    outline-color:hsl(39, 89%, 49%) ;
+}
+.rps-circle-blue {
+    width: 8rem;
+    height: 8rem;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 15px solid ;
+    cursor: pointer;
+    outline-color:hsl(189, 59%, 53%)  ;
+}
+
+
+
+#footer{
+    float: right;
+    height: inherit;
+    position: fixed;
+    bottom: 2rem;
+    right:2rem;
+}
+#footer button{
+    
+    background-color: transparent;
+    border: none;
+    outline: 2px solid white;
+    border-radius: 5px;
+    padding: 8px 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#scene1{
+    display: none;
+}
+
+#scene2{
+    width: 60%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+}
+#scene2 h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    margin-bottom: 5rem;
+}
+#result h2{
+font-size: 3rem;
+letter-spacing: 0;
+}
+#result button{
+    color:hsl(349, 71%, 52%) ;
+    background-color: white;
+    border-radius: 5px;
+    padding: 12px 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+}
+.skeletan{
+    background-color: rgba(0, 0, 0, 0.214);
+    outline: none;
+}
+.hidden{
+    visibility: hidden;
+}
+.none{
+    display: none;
+}
